@@ -1,8 +1,10 @@
 # amnolan
 # nums is an array like [1,9,3,7,4,8]
+# space complexity is O(1) because the space used does not grow it is constant
 def find_sum_of_three(nums, target):
 
    # becomes  [1,3,4,7,8,9]
+   # sort in python is O(Nlog(N)
    nums.sort()
 
 
@@ -13,6 +15,7 @@ def find_sum_of_three(nums, target):
    compare = 0
 
    # since there are is an extra compare items you subtract 2 instead of one
+   # time complexity of outer loop worst case is it reads every index which is O(n)
    while compare < len(nums) - 2:
       # first iteration looks like this
       #[1,3,4,7,8,9]
@@ -22,6 +25,7 @@ def find_sum_of_three(nums, target):
       right = len(nums) - 1
      
       # while the pointers have not crossed over
+      # time complexity of inner loop worst case is it reads every index which is O(n)
       while left < right:
          # sum of all three items
          sum_of_three = nums[compare] + nums[left] + nums[right]
